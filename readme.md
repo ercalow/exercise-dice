@@ -10,6 +10,8 @@ Can do now:
 
 To do:
 - Deploy on AWS-EC2.
+- Add user login
+- Add session management
 - Be able to choose how many exercises to do.
 - Be able to choose: repeats, or no repeats.
 - Be able to randomize number of reps.
