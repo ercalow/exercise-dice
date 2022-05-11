@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Your Workout</title>
+    </head>
+    <body>
+        <h1>Your Workout:</h1>
+        <table border='1'>
+            <thead>
+                <th>Name</th>
+                <th>Reps</th>
+            </thead>
+            {% for ex in exercises %}
+                <tr>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.reps}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <a href="/workout">Shuffle Again</a>
+        <a href="/">Back</a>
+    </body>
+</html>

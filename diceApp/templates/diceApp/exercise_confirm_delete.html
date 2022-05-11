@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Confirm Delete</title>
+    </head>
+    <body>
+        <h1>Are you sure you want to delete {{exercise.name}}?</h1>
+        <form method="post">
+            <input type="submit" value="Confirm">
+            <a href="/{{exercise.id}}">Cancel</a>
+            {% csrf_token %}
+        </form>
+    </body>
+</html>

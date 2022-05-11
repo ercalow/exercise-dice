@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>View/Edit Details</title>
+    </head>
+    <body>
+        <h1>View/Edit Details</h1>
+        <p>Exercise Name: {{exercise.name}}</p>
+        <p>Primary Muscle Group: {{exercise.muscleGroup}}</p>
+        <p>Secondary Muscle Group: {{exercise.muscleGroup2}}</p>
+        <p>Difficulty: {{exercise.difficulty}}</p>
+        <p>Reps (per side): {{exercise.reps}}</p>
+        <p>Always include?: {{exercise.alwaysInclude}}</p>
+
+        <p><a href="/delete/{{exercise.id}}">Delete</a></p>
+        <p><a href="/update/{{exercise.id}}">Update</a></p>
+        <p><a href="/">Back</a></p>
+    </body>
+</html>

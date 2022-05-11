@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise List</title>
+    </head>
+    <body>
+        <h1>All Exercises:</h1>
+        <table border='1'>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Primary Muscle Group</th>
+                <th>Secondary Muscle Group</th>
+                <th>Difficulty</th>
+                <th>Reps (per side)</th>
+                <th>Always Include?</th>
+            </thead>
+            {% for ex in exercise_list %}
+                <tr>
+                    <td><a href="/{{ex.id}}">{{ex.id}}</a></td>
+                    <td>{{ex.name}}</td>
+                    <td>{{ex.muscleGroup}}</td>
+                    <td>{{ex.muscleGroup2}}</td>
+                    <td>{{ex.difficulty}}</td>
+                    <td>{{ex.reps}}</td>
+                    <td>{{ex.alwaysInclude}}</td>
+                </tr>
+            {% endfor %}
+        </table><br>
+        Click ID to edit/delete.<br>
+        <a href="/create">Add New Exercise</a><br>
+        <a href="/workout">Generate Workout</a>
+    </body>
+</html>
