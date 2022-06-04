@@ -1,20 +1,40 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>View/Edit Details</title>
+        <link rel="stylesheet" href="{% static '/diceApp/css/style.css' %}">
     </head>
     <body>
-        <h1>View/Edit Details</h1>
-        <p>Exercise Name: {{exercise.name}}</p>
-        <p>Primary Muscle Group: {{exercise.muscleGroup}}</p>
-        <p>Secondary Muscle Group: {{exercise.muscleGroup2}}</p>
-        <p>Difficulty: {{exercise.difficulty}}</p>
-        <p>Reps (per side): {{exercise.reps}}</p>
-        <p>Always include?: {{exercise.alwaysInclude}}</p>
+        <div class="container">
+            <h1>View/Edit Details</h1>
+            <table>
+                <thead>
+                    <th>Exercise Name</th>
+                    <th>Primary Muscle Group</th>
+                    <th>Secondary Muscle Group</th>
+                    <th>Difficulty</th>
+                    <th>Reps (per side)</th>
+                    <th>Always include?</th>
+                </thead>
+                <tr>
+                    <td>{{exercise.name}}</td>
+                    <td>{{exercise.muscleGroup}}</td>
+                    <td>{{exercise.muscleGroup2}}</td>
+                    <td>{{exercise.difficulty}}</td>
+                    <td>{{exercise.reps}}</td>
+                    <td>{{exercise.alwaysInclude}}</td>
+                </tr>
+            </table>
+            <br>
+            <div class="btn-flex-container">
+                <a href="/delete/{{exercise.id}}" class='btn btn-flex'>Delete</a>
+                <a href="/update/{{exercise.id}}" class='btn btn-flex'>Update</a>
+                <a href="/" class='btn btn-flex'>Back</a>
+            </div>
 
-        <p><a href="/delete/{{exercise.id}}">Delete</a></p>
-        <p><a href="/update/{{exercise.id}}">Update</a></p>
-        <p><a href="/">Back</a></p>
+        </div>
+
     </body>
 </html>

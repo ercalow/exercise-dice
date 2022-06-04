@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>Add New Exercise</title>
+        <link rel="stylesheet" href="{% static '/diceApp/css/style.css' %}">
     </head>
     <body>
-        <h1>Add New Exercise:</h1>
-        <form method="post">
-            <table>
-                {{form.as_table}}
-                {% csrf_token %}
-            </table>
-            <input type="submit" value="Save">
-        </form>
-        <a href="/">Back</a>
+        <div class="container">
+            <h1>Add New Exercise:</h1>
+            <form method="post">
+                <table>
+                    {{form.as_table}}
+                    {% csrf_token %}
+                </table>
+                <div class="btn-flex-container">
+                    <input type="submit" value="Save" class='btn btn-flex'>
+                    <a href="/" class='btn btn-flex'>Back</a>
+                </div>
+
+            </form>
+
+        </div>
+
     </body>
 </html>

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <title>Your Workout</title>
+        <link rel="stylesheet" href="{% static '/diceApp/css/style.css' %}">
     </head>
     <body>
-        <h1>Your Workout:</h1>
-        <table border='1'>
-            <thead>
-                <th>Name</th>
-                <th>Reps</th>
-            </thead>
-            {% for ex in exercises %}
-                <tr>
-                    <td>{{ex.name}}</td>
-                    <td>{{ex.reps}}</td>
-                </tr>
-            {% endfor %}
-        </table>
-        <a href="/workout">Shuffle Again</a>
-        <a href="/">Back</a>
+        <div class="container">
+            <h1>Your Workout:</h1>
+            <table border='1'>
+                <thead>
+                    <th>Name</th>
+                    <th>Reps</th>
+                </thead>
+                {% for ex in exercises %}
+                    <tr>
+                        <td>{{ex.name}}</td>
+                        <td>{{ex.reps}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+            <div class="btn-flex-container">
+                <a href="/workout" class='btn btn-flex'>Shuffle Again</a>
+                <a href="/" class='btn btn-flex'>Back</a>
+            </div>
+
+        </div>
+
     </body>
 </html>
