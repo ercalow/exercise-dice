@@ -24,7 +24,7 @@ STATIC_DIR = BASE_DIR / 'static'
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6ksilfm78zvr2!)1=b1zfpu0f#l405vvyyv-_swxq__ov^!$-1'
+SECRET_KEY = 'deleted'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'exercisedb',
         'USER': 'root',
-        'PASSWORD': 'p1zza420'
+        'PASSWORD': 'deleted'
     }
 }
 # Fake PyMySQL's version and install as MySQLdb
